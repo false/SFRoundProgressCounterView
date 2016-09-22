@@ -18,10 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-Z4-igI" customClass="SFRoundProgressCounterView">
+                            <view alpha="0.94999999999999996" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-Z4-igI" customClass="SFRoundProgressCounterView">
+                                <frame key="frameInset" minX="20" minY="84" width="335" height="470"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="STu-Dv-XJc"/>
+                                    <constraint firstAttribute="height" constant="100" id="lfF-10-t9h"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gc1-5h-GTd">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gc1-5h-GTd">
+                                <frame key="frameInset" minX="20" minY="40" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="START">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,12 +40,10 @@
                         <color key="backgroundColor" red="0.92804372310638428" green="0.040559574961662292" blue="0.16637179255485535" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Gc1-5h-GTd" secondAttribute="trailing" constant="20" id="8Bv-Ic-lmQ"/>
+                            <constraint firstItem="sdk-Z4-igI" firstAttribute="centerY" secondItem="qOb-oO-W0G" secondAttribute="centerY" id="9bF-AQ-EBq"/>
                             <constraint firstItem="sdk-Z4-igI" firstAttribute="top" secondItem="Gc1-5h-GTd" secondAttribute="bottom" constant="10" id="CMq-6G-zuO"/>
-                            <constraint firstItem="QVb-dT-W33" firstAttribute="top" secondItem="sdk-Z4-igI" secondAttribute="bottom" constant="64" id="Cah-rA-lZK"/>
-                            <constraint firstItem="Gc1-5h-GTd" firstAttribute="top" secondItem="wzL-KI-qEw" secondAttribute="bottom" constant="20" id="CyK-oJ-GRK"/>
-                            <constraint firstAttribute="trailing" secondItem="sdk-Z4-igI" secondAttribute="trailing" constant="20" id="bg7-sh-LXh"/>
-                            <constraint firstItem="sdk-Z4-igI" firstAttribute="leading" secondItem="qOb-oO-W0G" secondAttribute="leading" constant="20" id="hb6-kF-2NT"/>
                             <constraint firstItem="Gc1-5h-GTd" firstAttribute="leading" secondItem="qOb-oO-W0G" secondAttribute="leading" constant="20" id="wVZ-ZC-pbi"/>
+                            <constraint firstItem="sdk-Z4-igI" firstAttribute="centerX" secondItem="qOb-oO-W0G" secondAttribute="centerX" id="zT9-ud-CGA"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Default" image="example_one" id="CBG-SK-JoR"/>

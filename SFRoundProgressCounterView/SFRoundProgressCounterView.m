@@ -86,10 +86,10 @@
     int fontSize = self.bounds.size.height/COUNTER_LABEL_SCALE_FACTOR;
     self.counterLabel.frame = CGRectMake(0, 0, innerWhiteCircleDiameter, diameter/2.0);
     
-    [self.counterLabel setBoldFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:fontSize + 20]];
-    [self.counterLabel setRegularFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:fontSize + 15]];
+    [self.counterLabel setBoldFont:[UIFont boldSystemFontOfSize:fontSize + 20]];
+    [self.counterLabel setRegularFont:[UIFont systemFontOfSize:fontSize + 15]];
     
-    [self.counterLabel setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:fontSize - 5]];
+    [self.counterLabel setFont:[UIFont systemFontOfSize:(fontSize + 10) weight:UIFontWeightLight]];
 
     self.counterLabel.adjustsFontSizeToFitWidth = YES;
     [self.counterLabel updateApperance];
