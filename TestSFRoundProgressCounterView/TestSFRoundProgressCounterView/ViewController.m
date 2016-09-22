@@ -34,6 +34,8 @@
     NSNumber* interval = [NSNumber numberWithLong:3000.0];
     self.progressCounterView.intervals = @[interval];
 
+    self.progressCounterView.backgroundColor = [UIColor clearColor];
+    
     // set thickness and distance parameters
     self.progressCounterView.outerCircleThickness = [NSNumber numberWithFloat:3.0];
     self.progressCounterView.innerCircleThickness = [NSNumber numberWithFloat:1.0];

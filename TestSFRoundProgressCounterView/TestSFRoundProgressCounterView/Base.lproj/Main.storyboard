@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HVH-BD-Sve">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="HVH-BD-Sve">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Default-->
+        <!--Default-->
         <scene sceneID="69r-Ew-jyT">
             <objects>
                 <viewController id="H12-gs-GBj" customClass="ViewController" sceneMemberID="viewController">
@@ -13,27 +15,23 @@
                         <viewControllerLayoutGuide type="bottom" id="QVb-dT-W33"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qOb-oO-W0G">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-Z4-igI" customClass="SFRoundProgressCounterView">
-                                <rect key="frame" x="20" y="84" width="280" height="371"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-Z4-igI" customClass="SFRoundProgressCounterView">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gc1-5h-GTd">
-                                <rect key="frame" x="20" y="40" width="280" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="START">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="actionStartStop:" destination="H12-gs-GBj" eventType="touchUpInside" id="jWo-QX-nnQ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92804372310638428" green="0.040559574961662292" blue="0.16637179255485535" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Gc1-5h-GTd" secondAttribute="trailing" constant="20" id="8Bv-Ic-lmQ"/>
                             <constraint firstItem="sdk-Z4-igI" firstAttribute="top" secondItem="Gc1-5h-GTd" secondAttribute="bottom" constant="10" id="CMq-6G-zuO"/>
@@ -54,7 +52,7 @@
             </objects>
             <point key="canvasLocation" x="337" y="-298"/>
         </scene>
-        <!--View Controller - Color-->
+        <!--Color-->
         <scene sceneID="2Ua-6f-fRF">
             <objects>
                 <viewController id="lG6-fJ-nmG" customClass="ViewController" sceneMemberID="viewController">
@@ -63,27 +61,23 @@
                         <viewControllerLayoutGuide type="bottom" id="iwO-qP-r5R"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a2N-yK-eBg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKI-My-Jsw" customClass="SFRoundProgressCounterView">
-                                <rect key="frame" x="20" y="84" width="280" height="345"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q60-OP-qTo">
-                                <rect key="frame" x="20" y="40" width="280" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="START">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="actionStartStop:" destination="lG6-fJ-nmG" eventType="touchUpInside" id="Vjr-WT-SON"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iwO-qP-r5R" firstAttribute="top" secondItem="LKI-My-Jsw" secondAttribute="bottom" constant="90" id="RLS-yB-KSb"/>
                             <constraint firstItem="Q60-OP-qTo" firstAttribute="leading" secondItem="a2N-yK-eBg" secondAttribute="leading" constant="20" id="gGe-aW-BjD"/>
@@ -104,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="337" y="372"/>
         </scene>
-        <!--View Controller - Intervals-->
+        <!--Intervals-->
         <scene sceneID="5a7-Yx-gJY">
             <objects>
                 <viewController id="mwD-GF-Pg7" customClass="ViewController" sceneMemberID="viewController">
@@ -113,27 +107,23 @@
                         <viewControllerLayoutGuide type="bottom" id="MyR-u6-Qrt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="B0T-qE-wbF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRY-Fl-XXH" customClass="SFRoundProgressCounterView">
-                                <rect key="frame" x="20" y="84" width="280" height="345"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xoc-5R-lXw">
-                                <rect key="frame" x="20" y="40" width="280" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="START">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="actionStartStop:" destination="mwD-GF-Pg7" eventType="touchUpInside" id="YSe-3S-ert"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Xoc-5R-lXw" firstAttribute="top" secondItem="N0p-GF-XoW" secondAttribute="bottom" constant="20" id="9na-sP-fxk"/>
                             <constraint firstAttribute="trailing" secondItem="Xoc-5R-lXw" secondAttribute="trailing" constant="20" id="HiE-NP-NrX"/>
@@ -162,7 +152,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ClR-Td-ASL">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="H12-gs-GBj" kind="relationship" relationship="viewControllers" id="ICb-AT-fc3"/>
@@ -176,13 +166,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="example_one" width="50" height="50"/>
-        <image name="example_three" width="50" height="50"/>
-        <image name="example_two" width="50" height="50"/>
+        <image name="example_one" width="25" height="25"/>
+        <image name="example_three" width="25" height="25"/>
+        <image name="example_two" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>

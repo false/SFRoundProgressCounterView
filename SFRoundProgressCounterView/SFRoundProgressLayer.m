@@ -70,6 +70,12 @@
     
     CGContextSetFillColorWithColor(context, self.tintColor.CGColor);
     CGContextFillPath(context);
+    
+    CGContextSetFillColorWithColor(context, [UIColor clearColor].CGColor);
+    CGContextSetBlendMode(context, kCGBlendModeClear);
+    CGContextAddArc(context, center.x, center.y, radius - 6, 0, 2 * M_PI, 0);
+    CGContextDrawPath(context, kCGPathFill);
+    CGContextSetBlendMode(context, kCGBlendModeNormal);
 }
 
 @end
