@@ -9,7 +9,7 @@
 //  Copyright (c) 2014 Simpliflow. All rights reserved.
 //
 
-#import "TTTAttributedLabel.h"
+#import <TTTAttributedLabel/TTTAttributedLabel.h>
 
 typedef NS_ENUM(NSInteger, kCountDirection){
     kCountDirectionUp = 0,
