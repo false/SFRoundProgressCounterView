@@ -96,12 +96,19 @@
 - (void)updateDisplay {
     // The control only displays the 10th of a millisecond, and 50 ms is enough to
     // ensure we see the last digit go to zero.
+    
+    BOOL secondsMode = YES;
+    
     if (self.countDirection == kCountDirectionDown && _value < 50 && self.isRunning) {
         [self stop];
         if (self.hideFraction) {
             self.valueString = @"00s";
         } else {
             self.valueString = @"00s.00";
+        }
+        
+        if (secondsMode) {
+            self.valueString = @"0s";
         }
         
         // Inform any delegates
@@ -160,8 +167,11 @@
                 if (hrsLength > 2) {
                     [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)boldFont range:NSMakeRange(0, hrsLength)];
                     CFRelease(boldFont);
-                } else {
+                } else if (mutableAttributedString.length > 2){
                     [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)boldFont range:NSMakeRange(0, 2)];
+                    CFRelease(boldFont);
+                } else {
+                    [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)boldFont range:NSMakeRange(0, 1)];
                     CFRelease(boldFont);
                 }
             }
@@ -182,29 +192,51 @@
     
     double elapsedTime = currentTime - self.startTime;
     
-    // Convert the double to milliseconds
-    unsigned long long milliSecs = (unsigned long long)(elapsedTime * 1000);
-    
-    if (self.countDirection == kCountDirectionDown) {
-        if (_startValue < milliSecs) {
-            [self setValue:0];
+    BOOL secondsMode = YES;
+    if (secondsMode) {
+        // Convert the double to milliseconds
+//        unsigned long long milliSecs = (unsigned long long)(ceilf(elapsedTime) * 1000); // TODO:
+        unsigned long long milliSecs = (unsigned long long)(elapsedTime * 1000);
+        
+        if (self.countDirection == kCountDirectionDown) {
+            if (_startValue < milliSecs) {
+                [self setValue:0];
+            } else {
+                [self setValue:(_startValue - milliSecs)];
+            }
         } else {
-            [self setValue:(_startValue - milliSecs)];
+            [self setValue:(_startValue + milliSecs)];
         }
     } else {
-        [self setValue:(_startValue + milliSecs)];
+        // Convert the double to milliseconds
+        unsigned long long milliSecs = (unsigned long long)(elapsedTime * 1000);
+        
+        if (self.countDirection == kCountDirectionDown) {
+            if (_startValue < milliSecs) {
+                [self setValue:0];
+            } else {
+                [self setValue:(_startValue - milliSecs)];
+            }
+        } else {
+            [self setValue:(_startValue + milliSecs)];
+        }
     }
     
     [self.countdownDelegate counter:self didReachValue:self.currentValue];
 }
 
 - (NSString *)timeFormattedStringForValue:(unsigned long long)value {
+    BOOL secondsMode = YES;
+    
     unsigned long long msperhour = 3600000;
     unsigned long long mspermin = 60000;
     
     unsigned long long hrs = value / msperhour;
     unsigned long long mins = (value % msperhour) / mspermin;
     unsigned long long secs = ((value % msperhour) % mspermin) / 1000;
+    double msecs = value / 1000.0f;
+    NSUInteger realSeconds = ceilf(msecs);
+    NSLog(@"msecs %zd", realSeconds);
     
     NSString *formattedString = @"";
     
@@ -213,7 +245,11 @@
     } else {
         if (hrs == 0) {
             if (mins == 0) {
-                formattedString = [NSString stringWithFormat:@"%02llus", secs];
+                if (secondsMode) {
+                    formattedString = [NSString stringWithFormat:@"%zds", realSeconds];
+                } else {
+                    formattedString = [NSString stringWithFormat:@"%02llus", secs];
+                }
             } else {
                 formattedString = [NSString stringWithFormat:@"%02llum %02llus", mins, secs];
             }

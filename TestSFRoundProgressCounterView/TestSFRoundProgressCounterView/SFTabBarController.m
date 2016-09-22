@@ -45,9 +45,9 @@
     if ([item.title isEqualToString:@"Default"]) {
         
         ViewController* controller = self.viewControllers[0];
-        NSNumber* singleValue = [NSNumber numberWithLong:5000];
-        controller.intervals = @[singleValue];
-        controller.color = nil;
+//        NSNumber* singleValue = [NSNumber numberWithLong:5000];
+//        controller.intervals = @[singleValue];
+//        controller.color = nil;
 
     } else if ([item.title isEqualToString:@"Color"]) {
         

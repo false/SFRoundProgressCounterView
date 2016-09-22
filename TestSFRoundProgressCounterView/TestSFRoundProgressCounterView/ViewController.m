@@ -31,31 +31,23 @@
     
     // setup progress timer view
     self.progressCounterView.delegate = self;
-    NSNumber* interval = [NSNumber numberWithLong:5000.0];
+    NSNumber* interval = [NSNumber numberWithLong:3000.0];
     self.progressCounterView.intervals = @[interval];
 
     // set thickness and distance parameters
     self.progressCounterView.outerCircleThickness = [NSNumber numberWithFloat:3.0];
     self.progressCounterView.innerCircleThickness = [NSNumber numberWithFloat:1.0];
     self.progressCounterView.circleDistance = [NSNumber numberWithFloat:6.0];
-    self.progressCounterView.hideFraction = self.hideFraction;
+    self.progressCounterView.hideFraction = YES;
     
     // set track colors
 //    self.progressCounterView.innerTrackColor = [UIColor redColor];
 //    self.progressCounterView.outerTrackColor = [UIColor blackColor];
-    
-    // setup audio player
-    [self.warningAudioPlayer prepareToPlay];
-    [self.finishAudioPlayer prepareToPlay];
-    self.playBeep = YES;
 }
 
 #pragma mark = SFRoundProgressTimerViewDelegate
 - (void)countdownDidEnd:(SFRoundProgressCounterView*)progressTimerView
 {
-    [self.finishAudioPlayer play];
-    self.playBeep = YES;
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.startStopButton setTitle:@"START" forState:UIControlStateNormal];
 //        [self.progressCounterView reset];

@@ -1,3 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
 
-pod 'SFRoundProgressCounterView', path: '../'
+abstract_target 'HoroscopeAbstract' do
+	
+	pod 'SFRoundProgressCounterView', path: '../'
+	
+	target 'TestSFRoundProgressCounterView' do
+	end
+	
+end

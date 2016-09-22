@@ -1,5 +1,5 @@
 PODS:
-  - SFRoundProgressCounterView (0.0.5):
+  - SFRoundProgressCounterView (0.0.6):
     - TTTAttributedLabel (~> 1.7.1)
   - TTTAttributedLabel (1.7.5)
 
@@ -8,10 +8,12 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   SFRoundProgressCounterView:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  SFRoundProgressCounterView: 96e97f53c6c67181ebce9c2a71c06be1bcd06001
-  TTTAttributedLabel: 8a0d6aefe4a24b8b91899ee2a8a9b050e70de85d
+  SFRoundProgressCounterView: 47517b12c7ad2dd38b2b910a1d5db48c6efb23c5
+  TTTAttributedLabel: 19f03d496810ab0706c392a297c6d49fe173bac4
 
-COCOAPODS: 0.35.0
+PODFILE CHECKSUM: fb925fc28a5e14e93607442738915986bfc41ef2
+
+COCOAPODS: 1.0.1
