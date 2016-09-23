@@ -236,7 +236,6 @@
     unsigned long long secs = ((value % msperhour) % mspermin) / 1000;
     double msecs = value / 1000.0f;
     NSUInteger realSeconds = ceilf(msecs);
-    NSLog(@"msecs %zd", realSeconds);
     
     NSString *formattedString = @"";
     
