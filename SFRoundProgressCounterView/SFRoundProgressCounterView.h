@@ -25,7 +25,7 @@
 
 @interface SFRoundProgressCounterView : UIView<SFCounterLabelDelegate>
 
-@property (assign, nonatomic) id <SFRoundProgressCounterViewDelegate> delegate;
+@property (weak, nonatomic) id <SFRoundProgressCounterViewDelegate> delegate;
 
 @property (nonatomic, strong) UIView* outerCircleView;
 @property (nonatomic, strong) UIView* innerCircleView;
